@@ -64,7 +64,7 @@ h1{
 }
 
 
-.charKey{
+.charKey, #equal{
     font-family: Audiowider;
     width: 50px;
     height: 50px;
@@ -92,7 +92,7 @@ h1{
     box-shadow:  5px -5px 13px #101013, -5px 5px 13px #1c1c21;
 }
 
-.charKey:hover{
+.charKey:hover, #equal:hover{
     border-radius: 10px;
     background: linear-gradient(45deg, #141417, #18181c);
     box-shadow:  5px -5px 13px #101013, -5px 5px 13px #1c1c21;
@@ -105,7 +105,7 @@ h1{
     box-shadow:  5px -5px 13px #101013, -5px 5px 13px #1c1c21;
 }
 
-.charKey:active{
+.charKey:active, #equal:active{
     border-radius: 10px;
     background: #16161a;
     box-shadow: inset 5px -5px 13px #101013, inset -5px 5px 13px #1c1c21;
