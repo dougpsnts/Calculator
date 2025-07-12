@@ -36,3 +36,10 @@ function calculate() {
 	const result = eval(input.value)
 	input.value = result
 }
+
+// Clear the input field when the "C" button is clicked
+
+document.getElementById("clear").addEventListener("click", function () {
+	input.value = "";
+	input.focus()
+})
