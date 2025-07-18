@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Audiowider";
+  src: url(fontes/Audiowide.woff);
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(45deg, #3c2583, #242629);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.ckey, .charKey,
+#equal {
+  font-family: "Audiowider", sans-serif;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.9rem;
+  margin: 5px;
+  border: none;
+  color: #fffffe;
+  border-radius: 10px;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #calculadora {
+  width: 248px;
+  height: 400px;
+  background: rgb(22, 22, 26);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(17.5px);
+  padding: 28px;
+  color: #fffffe;
+  border-radius: 20px;
+}
+main #calculadora h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Audiowider", sans-serif;
+  text-transform: uppercase;
+}
+main #calculadora #input {
+  width: 240px;
+  height: 2.5rem;
+  border-radius: 0.9rem;
+  border: none;
+  background: #fff;
+  margin: 10px auto;
+  color: black;
+  text-align: end;
+  padding: 5px;
+  font-size: 1.8rem;
+  font-family: "Audiowider", sans-serif;
+}
+main #calculadora .teclado {
+  width: 225px;
+  margin: 0 auto;
+}
+
+.charKey,
+#equal {
+  background: #16161a;
+  box-shadow: 5px -5px 13px #101013, -5px 5px 13px #1c1c21;
+}
+.charKey:hover,
+#equal:hover {
+  background: linear-gradient(45deg, #141417, #18181c);
+}
+.charKey:active,
+#equal:active {
+  box-shadow: inset 5px -5px 13px #101013, inset -5px 5px 13px #1c1c21;
+}
+
+.ckey {
+  background: #3c2583;
+  box-shadow: 5px -5px 13px #101013, -5px 5px 13px #1c1c21;
+}
+.ckey:hover {
+  background: linear-gradient(45deg, #362176, #40288c);
+}
+.ckey:active {
+  box-shadow: inset 5px -5px 13px #2c1b61, inset -5px 5px 13px #4c2fa5;
+}
+
+/*# sourceMappingURL=style.css.map */

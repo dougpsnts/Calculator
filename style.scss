@@ -1,0 +1,120 @@
+// Variáveis
+$font-principal: 'Audiowider', sans-serif;
+$cor-primaria: #3c2583;
+$cor-fundo-gradiente: #242629;
+$cor-texto: #fffffe;
+$cor-calculadora-bg: rgba(22, 22, 26, 1);
+$cor-botao: #16161a;
+$cor-botao-especial: $cor-primaria;
+$sombra-escura: #101013;
+$sombra-clara: #1c1c21;
+
+// Reset e Estilos Globais
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Audiowider';
+  src: url(fontes/Audiowide.woff);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(45deg, $cor-primaria, $cor-fundo-gradiente);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+// Placeholder para o estilo base dos botões
+%botao-base {
+  font-family: $font-principal;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.9rem;
+  margin: 5px;
+  border: none;
+  color: $cor-texto;
+  border-radius: 10px;
+}
+
+// Estilos Principais
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #calculadora {
+    width: 248px;
+    height: 400px;
+    background: $cor-calculadora-bg;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(17.5px);
+    padding: 28px;
+    color: $cor-texto;
+    border-radius: 20px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+      font-family: $font-principal;
+      text-transform: uppercase;
+    }
+
+    #input {
+      width: 240px;
+      height: 2.5rem;
+      border-radius: 0.9rem;
+      border: none;
+      background: #fff;
+      margin: 10px auto;
+      color: black;
+      text-align: end;
+      padding: 5px;
+      font-size: 1.8rem;
+      font-family: $font-principal;
+    }
+
+    .teclado {
+      width: 225px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Estilos dos Botões
+.charKey,
+#equal {
+  @extend %botao-base;
+  background: $cor-botao;
+  box-shadow: 5px -5px 13px $sombra-escura, -5px 5px 13px $sombra-clara;
+
+  &:hover {
+    background: linear-gradient(45deg, #141417, #18181c);
+  }
+
+  &:active {
+    box-shadow: inset 5px -5px 13px $sombra-escura, inset -5px 5px 13px $sombra-clara;
+  }
+}
+
+.ckey {
+  @extend %botao-base;
+  background: $cor-botao-especial;
+  box-shadow: 5px -5px 13px $sombra-escura, -5px 5px 13px $sombra-clara;
+
+  &:hover {
+    background: linear-gradient(45deg, #362176, #40288c);
+  }
+
+  &:active {
+    box-shadow: inset 5px -5px 13px #2c1b61, inset -5px 5px 13px #4c2fa5;
+  }
+}
